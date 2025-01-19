@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 100%;
+        }
+        p {
+            background-image: url('https://www.w3schools.com/images/w3schools_green.jpg');
+        }
+        body {
+            background-image: url('https://www.w3schools.com/images/w3schools_green.jpg');
+            background-size: 10%;
+        }
+    </style>
+</head>
+<body>
+<img src="pic_trulli.jpg" alt="Italian Trulli">
+<img src="../../res/w3schools.jpg" alt="Flowers in Chania">
+<img src="url" alt="alternatetext">
+<img src="../../res/w3schools.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+<p><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.</p>
+
+<p><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    The image will float to the left of the text.</p>
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    onclick="myFunction()">
+</map>
+<script>
+    function myFunction() {
+        alert("You clicked the coffee cup!");
+    }
+</script>
+<p style="background-image: url('https://www.w3schools.com/images/w3schools_green.jpg');">
+    <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img_car.jpg">
+        <img src="img_girl.jpg">
+    </picture>
+
+
+</body>
+
+</html>
