@@ -1,0 +1,75 @@
+html {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    gap: 50px;
+}
+
+.left-section {
+
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #000000
+}
+
+.login-form h1 {
+    font-family: "Franklin Gothic Heavy", cursive;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 20px;
+}
+
+footer a, p, select {
+    font-size: 14px;
+    text-decoration: none;
+    color: #2d2a26;
+}
+footer select {
+    font-size: 14px;
+    border: none;
+    width: auto;
+}
+footer select:focus {
+    outline: none;
+    border: none;
+}
+
+.footer-bottom {
+    display: flex;
+    gap: 20px;
+}
