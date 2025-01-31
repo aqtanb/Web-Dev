@@ -14,7 +14,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
     font-size: 16px;
 }
 
@@ -31,51 +30,45 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 50vh;
+    max-width: 800px;
+    margin: 5rem auto;
+    padding: 2rem 1rem;
 }
 
 .top-part {
-    margin-bottom: 2vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .app-title {
     font-size: 2em;
     font-weight: 500;
-    position: relative;
-    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
 .add-task {
-    margin: 2vh 5vh;
+    display: flex;
+    padding: 0 4rem;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .input-task {
-    font-size: 1em;
-    padding: 1vh;
-    width: 50vw;
+    flex: 1;
+    padding: 0.75rem;
     border: 1px solid var(--light-gray);
     border-radius: 4px;
-}
-
-.input-task:focus {
-    outline-color: var(--blue);
+    font-size: 1rem;
 }
 
 .btn-add {
-    margin-left: 2vw;
-    padding: 1vh;
+    padding: 0.75rem 1.5rem;
     background: var(--blue);
     border: none;
     border-radius: 4px;
     color: white;
-    text-align: center;
+    cursor: pointer;
 }
 
 .btn-add:hover {
@@ -84,21 +77,26 @@ body {
 
 .todos {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .todo {
-    width: 60%;
-    border: 1px solid var(--light-gray);
-    border-radius: 4px;
-    padding: 2vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5vw;
-    text-align: left;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    border-top: none;
+}
+
+.todos > .todo:first-child {
+    border-top: 1px solid var(--light-gray);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.todos > .todo:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .checkbox {
@@ -107,11 +105,11 @@ body {
 }
 
 .task-name {
-    text-align: left;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .trash-bin {
     height: 20px;
     width: 20px;
+    cursor: pointer;
 }
