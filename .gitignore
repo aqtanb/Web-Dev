@@ -7,3 +7,7 @@
 /dataSources/
 /dataSources.local.xml
 .idea/
+
+# Ignore Angular build and dependencies
+.angular/
+node_modules/
