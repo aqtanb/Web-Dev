@@ -32,8 +32,14 @@ export class AlbumDetailComponent implements OnInit {
   }
 
   saveTitle(): void {
-    this.albumsService.updateAlbum(this.album.id, this.newTitle).subscribe(() => {
-      this.album.title = this.newTitle;
+    if (!this.album) return;
+
+    this.albumsService.updateAlbum(this.album.id, this.newTitle).subscribe({
+      next: () => {
+        // Force UI update
+        this.album = { ...this.album, title: this.newTitle };
+      },
+      error: (err) => alert('Failed to save! Changes reverted.')
     });
   }
 }

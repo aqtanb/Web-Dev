@@ -7,7 +7,6 @@
     <label>Title:</label>
     <input type="text" [(ngModel)]="newTitle" placeholder="Album title">
   </div>
-
   <button class="btn btn-primary" (click)="saveTitle()">Save Changes</button>
   <a class="btn btn-primary" [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
   <button class="btn" routerLink="/albums">Return to Albums</button>

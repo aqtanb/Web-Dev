@@ -18,7 +18,7 @@ export class AlbumsComponent implements OnInit {
   constructor(private albumsService: AlbumsService) { }
 
   ngOnInit(): void {
-    this.albumsService.getAlbums().subscribe(albums => {
+    this.albumsService.albums$.subscribe(albums => {
       this.albums = albums;
     });
   }
@@ -28,4 +28,5 @@ export class AlbumsComponent implements OnInit {
       this.albums = this.albums.filter(album => album.id !== id);
     });
   }
+
 }
