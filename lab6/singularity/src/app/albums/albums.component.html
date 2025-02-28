@@ -1,0 +1,9 @@
+<div class="card">
+  <h2>Albums List</h2>
+  <div class="albums-list">
+    <div class="album-item" *ngFor="let album of albums">
+      <a [routerLink]="['/albums', album.id]">{{ album.title }}</a>
+      <button class="btn btn-danger" (click)="deleteAlbum(album.id)">Delete</button>
+    </div>
+  </div>
+</div>

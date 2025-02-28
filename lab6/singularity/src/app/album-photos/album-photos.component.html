@@ -1,0 +1,7 @@
+<div class="card">
+  <h2>Album Photos</h2>
+  <div class="photos-grid">
+    <img *ngFor="let photo of photos" [src]="photo.url" [alt]="photo.title">
+  </div>
+  <button class="btn" [routerLink]="['/albums', route.snapshot.paramMap.get('id')]">Return to Album</button>
+</div>
