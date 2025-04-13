@@ -1,1 +1,24 @@
-<p>company-list works!</p>
+<div class="container">
+  <h1 class="title">Companies</h1>
+  <div *ngIf="(companies$ | async) as companies; else loading">
+    <div class="company-grid">
+      <div
+        *ngFor="let company of companies"
+        class="company-card"
+        (click)="showVacancies(company.id)"
+      >
+        <div class="card-header">
+          <h2>{{ company.name }}</h2>
+          <span class="city">{{ company.city }}</span>
+        </div>
+        <div class="stats">
+          <span class="badge">{{ getVacanciesCount(company.id) }} vacancies</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p class="loading">Loading companies...</p>
+  </ng-template>
+</div>

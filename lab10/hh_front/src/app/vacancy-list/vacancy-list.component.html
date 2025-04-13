@@ -1,1 +1,20 @@
-<p>vacancy-list works!</p>
+<div class="container">
+  <div class="header">
+    <h1 class="title">Vacancies</h1>
+    <button routerLink="/">⬅ Back to Companies</button>
+  </div>
+
+  <div class="vacancy-grid" *ngIf="(vacancies$ | async) as vacancies">
+    <div *ngFor="let vacancy of vacancies" class="vacancy-card">
+      <div class="vacancy-header">
+        <h2>{{ vacancy.name }}</h2>
+        <span class="salary">{{ vacancy.salary | currency:'KZT':'symbol':'1.0-0' }}</span>
+      </div>
+      <p class="description">{{ vacancy.description }}</p>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="!(vacancies$ | async)">
+    Loading vacancies...
+  </div>
+</div>
